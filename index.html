@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis App</title>
+</head>
+<body>
+    <h2>Sentiment Analysis</h2>
+    <form method="POST">
+        <textarea name="text" rows="4" cols="50" placeholder="Enter text here..."></textarea><br><br>
+        <input type="submit" value="Analyze">
+    </form>
+
+    {% if result %}
+        <h3>Prediction: {{ result['label'] }} (Confidence: {{ result['score']|round(3) }})</h3>
+    {% endif %}
+</body>
+</html>
